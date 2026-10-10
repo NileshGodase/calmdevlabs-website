@@ -1,7 +1,7 @@
 # CalmDevLabs Website — Final Readiness Report
 
 **Date:** 2026-10-10
-**Status:** Built, tested locally, **not yet deployed** — awaiting founder actions below.
+**Status:** Built, tested, and pushed to GitHub. **Not yet deployed** — awaiting founder actions below.
 
 ## What was delivered
 
@@ -23,15 +23,15 @@ A complete, responsive company website for CalmDevLabs at `~/workspace/calmdevla
 | 41-check browser QA (console, nav, mobile menu, form validation ×3, overflow, screenshots) | ✅ tested — 41/41 pass |
 | Accessibility review (labels, focus, contrast, reduced-motion, semantics) | ✅ tested (code review + static checks; no axe runner installed) |
 | Honesty review (no invented claims) | ✅ completed |
-| Pushed to GitHub | ❌ **blocked** — see below |
-| GitHub Pages deployment | ❌ not started — blocked on push |
-| Custom domain + HTTPS live | ❌ not started — needs founder DNS work |
+| Pushed to GitHub (`NileshGodase/calmdevlabs-website`, 37 files, 6 commits) | ✅ completed |
+| GitHub Pages deployment | ⏳ needs founder: Pages source → GitHub Actions (then auto-deploys) |
+| Custom domain + HTTPS live | ⏳ needs founder: Pages custom domain + Cloudflare DNS (guide ready) |
 | Contact email provisioned | ❌ not started — Zoho setup pending (documented) |
 
 ## Blockers & remaining manual steps (founder)
 
-1. **Create the repo** — `create_repository` via the connector was approved but rejected by GitHub (403: the app cannot create repos). Create `calmdevlabs-website` (Public) at github.com/new, then grant the Muse app access at the installations page. Reply "done" and the full site pushes in one commit (one approval tap).
-2. **Pages settings** — Settings → Pages → Source: GitHub Actions; custom domain `calmdevlabs.com`; Enforce HTTPS once the certificate issues. (Documented in `docs/DEPLOYMENT_GUIDE.md`.)
+1. ~~**Create the repo**~~ ✅ done — `NileshGodase/calmdevlabs-website` (public).
+2. **Pages settings** — Settings → Pages → Source: **GitHub Actions**; custom domain `calmdevlabs.com`; Enforce HTTPS once the certificate issues. The first Actions run then builds and deploys automatically. (Documented in `docs/DEPLOYMENT_GUIDE.md`.)
 3. **Cloudflare DNS** — apex A records → GitHub Pages IPs; `www` CNAME → `nileshgodase.github.io`; proxy OFF during verification; redirect rule `www` → apex. Verify with `dig`/`curl` per the guide.
 4. **Company email** — follow `docs/EMAIL_SETUP_ZOHO.md` (domain verification, MX, SPF/DKIM/DMARC, create `contact@calmdevlabs.com`), then set `emailProvisioned: true` in `src/config.ts` and redeploy.
 5. **Post-deploy spot-check** — confirm the live site renders and the contact form behaves (I will verify if asked).

@@ -85,9 +85,9 @@ Verified 2026-10-10 with Playwright (headless Chromium) against the production
 
 | Check | Result |
 |---|---|
-| GitHub repo created | ❌ **blocked** — `create_repository` via connector approved by user but rejected by GitHub (403, app cannot create repos). User creating `calmdevlabs-website` manually |
-| Source pushed | ⏳ blocked on repo creation — will push via `push_files` (single commit, one approval tap) |
-| Pages build from Actions succeeds | ⏳ after push |
+| GitHub repo created | ✅ `NileshGodase/calmdevlabs-website` (public, via web UI — connector `create_repository` is blocked for the app) |
+| Source pushed | ✅ 37 files in 6 commits on `main` (3× `push_files` + workflow + OG image via browser; content integrity spot-checked) |
+| Pages build from Actions succeeds | ⏳ runs on first push after Pages source is set to GitHub Actions (user-side setting) |
 | Custom domain verifies, HTTPS enforced | ⏳ needs Pages settings + Cloudflare DNS (user-side, documented) |
 | `dig`/`curl` checks pass | ⏳ after DNS |
 | Live site spot-check | ⏳ only if authorized |
