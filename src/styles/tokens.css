@@ -1,0 +1,96 @@
+/* CalmDevLabs design tokens — the single source of truth for brand styling.
+   Sections: color, typography, spacing, radii, shadows, widths, breakpoints,
+   focus, motion. Honor prefers-reduced-motion and AA contrast. */
+
+:root {
+  /* ---- Brand color ---- */
+  --color-navy-950: #0a1120;   /* page dark base */
+  --color-navy-900: #0e1626;   /* header / footer */
+  --color-navy-800: #16233c;   /* dark card */
+  --color-navy-700: #1f2f4d;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;   /* primary accent */
+  --color-teal-500: #14b8a6;
+  --color-teal-700: #0f766e;   /* accent on light bg */
+  --color-violet-400: #a78bfa; /* rare highlight only */
+
+  /* ---- Light surfaces ---- */
+  --color-paper: #f7f8fa;
+  --color-card: #ffffff;
+  --color-ink: #182234;        /* body text on light */
+  --color-ink-soft: #47536c;   /* secondary text on light */
+  --color-ink-faint: #6d7a90;
+  --color-line: #e2e8f1;       /* borders on light */
+
+  /* ---- Dark surfaces ---- */
+  --color-on-dark: #eef2f8;    /* body text on dark */
+  --color-on-dark-soft: #a9b6cc;
+  --color-on-dark-faint: #7e8ba3;
+  --color-line-dark: rgba(255, 255, 255, 0.12);
+
+  /* ---- Semantics ---- */
+  --color-danger: #dc2626;
+  --color-success: #0f766e;
+
+  /* ---- Typography ---- */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.375rem;
+  --text-4xl: 3.25rem;
+
+  --leading-tight: 1.12;
+  --leading-snug: 1.35;
+  --leading-normal: 1.65;
+
+  --measure: 68ch;             /* max line length for prose */
+
+  /* ---- Spacing (4px base) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ---- Radii ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 1px 2px rgba(10, 17, 32, 0.07);
+  --shadow-md: 0 8px 28px -10px rgba(10, 17, 32, 0.22);
+  --shadow-lg: 0 18px 48px -16px rgba(10, 17, 32, 0.3);
+
+  /* ---- Content widths ---- */
+  --width-content: 1140px;
+  --width-narrow: 780px;
+
+  /* ---- Breakpoints ---- */
+  --bp-sm: 640px;
+  --bp-md: 960px;
+  --bp-lg: 1200px;
+
+  /* ---- Focus ---- */
+  --focus-ring: 0 0 0 3px rgba(45, 212, 191, 0.5);
+
+  /* ---- Motion ---- */
+  --duration-fast: 150ms;
+  --duration-med: 260ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

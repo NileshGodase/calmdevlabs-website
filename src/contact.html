@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Discuss a Project | CalmDevLabs</title>
+  <meta name="description" content="Contact CalmDevLabs about your project: Android apps, web platforms, ERP and HR portal, backend and APIs. Tell us what you are trying to solve." />
+  <link rel="canonical" href="https://calmdevlabs.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalmDevLabs" />
+  <meta property="og:title" content="Contact — Discuss a Project | CalmDevLabs" />
+  <meta property="og:description" content="Tell us what you are trying to solve. We reply with honest thoughts." />
+  <meta property="og:url" content="https://calmdevlabs.com/contact.html" />
+  <meta property="og:image" content="https://calmdevlabs.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0a1120" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <!--#include sprite.html -->
+  <!--#include header.html -->
+  <main id="main">
+    <section class="hero">
+      <div class="container container-narrow">
+        <p class="eyebrow">Contact</p>
+        <h1>Discuss a project.</h1>
+        <p class="lead">Tell us what you are trying to solve. We will reply with honest thoughts — including when we are not the right fit.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="form-note" data-email-notice hidden>
+          <strong>Company email being set up.</strong>
+          Our address <span data-email-address></span> is being provisioned.
+          The form below still works — it opens your email client with everything addressed correctly.
+        </div>
+
+        <form class="form" data-contact-form novalidate style="margin-top: var(--space-8)">
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required />
+              <p class="field-error" data-error-for="name" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Business email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required />
+              <p class="field-error" data-error-for="email" role="alert"></p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-company">Company <span class="optional">(optional)</span></label>
+              <input id="f-company" name="company" type="text" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="f-category">Project category</label>
+              <select id="f-category" name="category" required>
+                <option value="">Choose a category…</option>
+                <option>Android app</option>
+                <option>Web application</option>
+                <option>ERP / HR portal</option>
+                <option>Backend &amp; APIs</option>
+                <option>Database &amp; integration</option>
+                <option>Maintenance / modernization</option>
+                <option>IT services / other</option>
+              </select>
+              <p class="field-error" data-error-for="category" role="alert"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-budget">Budget range <span class="optional">(optional)</span></label>
+            <select id="f-budget" name="budget">
+              <option value="">Prefer not to say yet</option>
+              <option>Under ₹50,000</option>
+              <option>₹50,000 – ₹2,00,000</option>
+              <option>₹2,00,000 – ₹5,00,000</option>
+              <option>Above ₹5,00,000</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-desc">Project description</label>
+            <textarea id="f-desc" name="description" required placeholder="What are you trying to solve? Who is it for? What does success look like?"></textarea>
+            <p class="field-error" data-error-for="description" role="alert"></p>
+          </div>
+          <div class="field hp-field" aria-hidden="true">
+            <label for="f-web">Website</label>
+            <input id="f-web" name="company_website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <div class="field">
+            <div class="checkbox-field">
+              <input id="f-consent" name="consent" type="checkbox" required />
+              <label for="f-consent">I understand this form opens my email client and that CalmDevLabs will use my details only to respond to this inquiry. See the <a href="/privacy.html">privacy policy</a>.</label>
+            </div>
+            <p class="field-error" data-error-for="consent" role="alert"></p>
+          </div>
+          <div>
+            <button class="btn btn-primary" type="submit">Send Inquiry <svg class="icon" aria-hidden="true"><use href="#icon-send"></use></svg></button>
+          </div>
+          <p class="muted" style="font-size: var(--text-sm)">This site has no backend — pressing send opens your email client with a pre-addressed message. Nothing is stored on our servers.</p>
+        </form>
+
+        <div class="form-success" data-form-success tabindex="-1" role="status">
+          <h3><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> Your email client should have opened.</h3>
+          <p class="muted">If it did not, send your inquiry directly to <a data-email-link href="mailto:"><span data-email-address></span></a> — just include your name, project category, and a description of what you are trying to solve.</p>
+        </div>
+
+        <div class="prose" style="margin-top: var(--space-12)">
+          <h2>What happens next</h2>
+          <ul>
+            <li>We read every inquiry personally — no autoresponders, no sales funnel.</li>
+            <li>If it looks like a fit, we schedule a discovery conversation (see <a href="/process.html">how we work</a>).</li>
+            <li>If it is not a fit, we will say so plainly — and suggest what might work instead.</li>
+          </ul>
+          <h2>Prefer email directly?</h2>
+          <p>Write to <a data-email-link href="mailto:"><span data-email-address></span></a> with your name, project category, and a short description.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--#include footer.html -->
+</body>
+</html>
