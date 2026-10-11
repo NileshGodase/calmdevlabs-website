@@ -38,6 +38,7 @@ src/
   main.ts        # nav toggle, form validation, mailto fallback, AI demo widget
   config.ts      # domain, contact email, emailProvisioned flag
 public/          # CNAME, logo.png, og-image.png, robots.txt, sitemap.xml
+  images/        # generated illustrations (hero, AI, education, concept)
 scripts/         # build-icons.mjs
 docs/            # implementation plan, deployment guide, content checklist, testing report, AI capabilities
 ```
