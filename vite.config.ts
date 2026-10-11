@@ -39,8 +39,11 @@ const pages = readdirSync(srcDir)
 export default defineConfig({
   root: 'src',
   publicDir: resolve(rootDir, 'public'),
-  // Custom domain serves the site from the domain root.
-  base: '/',
+  // Relative base: every page is flat at the output root, so relative asset
+  // URLs resolve correctly whether the site is served from a subpath
+  // (github.io/<repo>/) or the domain root (calmdevlabs.com). Plain page
+  // links in the markup are likewise written relative (./about.html).
+  base: './',
   plugins: [htmlPartials()],
   build: {
     outDir: resolve(rootDir, 'dist'),
