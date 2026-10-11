@@ -56,7 +56,8 @@ Vite `base` will be `/` (domain-root deployment with custom domain). Verified in
 - **Personality:** calm, confident, technically competent, minimal, trustworthy.
 - **Foundation:** deep navy/charcoal; **accent:** restrained teal (blue-violet reserved
   for rare highlights). AA contrast on all text pairs; `prefers-reduced-motion` honored.
-- **Wordmark:** custom SVG (reusable component) + SVG favicon + OG social image.
+- **Brand mark:** AI-generated wave-C monogram (`public/logo.png`, 512px; also used as
+  the favicon) + OG social image. Two alternate concepts kept in `logo-drafts/` (gitignored).
 - **Typography:** system-font stack with strong hierarchy (no webfont dependency =
   zero FOUT, fastest load); generous whitespace; max line lengths ~65ch.
 - **No** generic AI illustrations, fake dashboards, stock testimonials, or decorative

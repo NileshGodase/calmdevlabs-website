@@ -37,7 +37,7 @@ src/
   styles/        # tokens.css (design system), main.css
   main.ts        # nav toggle, form validation, mailto fallback
   config.ts      # domain, contact email, emailProvisioned flag
-public/          # CNAME, favicon, og-image, robots.txt, sitemap.xml
+public/          # CNAME, logo.png, og-image.png, robots.txt, sitemap.xml
 scripts/         # build-icons.mjs
 docs/            # implementation plan, deployment guide, content checklist, testing report
 ```
