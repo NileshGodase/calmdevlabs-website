@@ -44,7 +44,7 @@ Verified 2026-10-10 with Playwright (headless Chromium) against the production
 | Contact form: invalid input (bad email, short description, no consent) → targeted errors, valid fields clean | ✅ |
 | Contact form: valid input → success panel appears, mailto composed | ✅ |
 | Email "being set up" notice visible on contact page | ✅ |
-| Footer email link shows contact@calmdevlabs.com | ✅ |
+| Footer email link shows founders@calmdevlabs.com | ✅ |
 | No console errors or page errors on any of the 9 pages | ✅ |
 | No horizontal overflow at 1280px or 390px on any page | ✅ |
 | Screenshots reviewed (desktop + mobile home, services, contact success) | ✅ no layout defects |

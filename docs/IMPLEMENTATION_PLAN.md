@@ -27,10 +27,9 @@ plus answers to the open decisions in §1 before substantial implementation begi
 1. **Production domain:** `calmdevlabs.com` ✅ (apex is canonical; `www` redirects to apex)
 2. **Repository:** new repo `NileshGodase/calmdevlabs-website` (founder: "go with your suggestion").
    Creation and pushes surface approval taps.
-3. **Contact email:** to be created via Zoho Mail (or similar) on the new domain.
-   Planned address `contact@calmdevlabs.com` — **not yet provisioned**. The site ships
-   with a guarded `mailto:` fallback plus a visible "company email being set up" notice.
-   Exact setup steps: `docs/EMAIL_SETUP_ZOHO.md`.
+3. **Contact email:** `founders@calmdevlabs.com` — **provisioned 2026-10-11** (founder confirmed).
+   Site config updated (`emailProvisioned: true`); the "being set up" notice is gone.
+   Setup steps (for reference): `docs/EMAIL_SETUP_ZOHO.md`.
 4. **Showcase material:** none yet — honest empty/experiment states throughout.
    **Service focus confirmed:** application development (Android + web apps),
    IT services, and ERP — with an **HR portal** as the concrete ERP offering.

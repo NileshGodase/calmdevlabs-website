@@ -23,17 +23,17 @@ A complete, responsive company website for CalmDevLabs at `~/workspace/calmdevla
 | 41-check browser QA (console, nav, mobile menu, form validation ×3, overflow, screenshots) | ✅ tested — 41/41 pass |
 | Accessibility review (labels, focus, contrast, reduced-motion, semantics) | ✅ tested (code review + static checks; no axe runner installed) |
 | Honesty review (no invented claims) | ✅ completed |
-| Pushed to GitHub (`NileshGodase/calmdevlabs-website`, 37 files, 6 commits) | ✅ completed |
-| GitHub Pages deployment | ⏳ needs founder: Pages source → GitHub Actions (then auto-deploys) |
-| Custom domain + HTTPS live | ⏳ needs founder: Pages custom domain + Cloudflare DNS (guide ready) |
-| Contact email provisioned | ❌ not started — Zoho setup pending (documented) |
+| Pushed to GitHub (`NileshGodase/calmdevlabs-website`, 37 files, 7 commits) | ✅ completed |
+| GitHub Pages deployment | ✅ **deployed 2026-10-10** — live at https://nileshgodase.github.io/calmdevlabs-website/ (Pages source: GitHub Actions; workflow green, HTTP 200 verified) |
+| Custom domain + HTTPS on calmdevlabs.com | ⏳ needs founder: Pages custom domain field + Cloudflare DNS (guide ready) |
+| Contact email provisioned | ✅ `founders@calmdevlabs.com` live since 2026-10-11 |
 
 ## Blockers & remaining manual steps (founder)
 
 1. ~~**Create the repo**~~ ✅ done — `NileshGodase/calmdevlabs-website` (public).
 2. **Pages settings** — Settings → Pages → Source: **GitHub Actions**; custom domain `calmdevlabs.com`; Enforce HTTPS once the certificate issues. The first Actions run then builds and deploys automatically. (Documented in `docs/DEPLOYMENT_GUIDE.md`.)
 3. **Cloudflare DNS** — apex A records → GitHub Pages IPs; `www` CNAME → `nileshgodase.github.io`; proxy OFF during verification; redirect rule `www` → apex. Verify with `dig`/`curl` per the guide.
-4. **Company email** — follow `docs/EMAIL_SETUP_ZOHO.md` (domain verification, MX, SPF/DKIM/DMARC, create `contact@calmdevlabs.com`), then set `emailProvisioned: true` in `src/config.ts` and redeploy.
+4. ~~**Company email**~~ ✅ done 2026-10-11 — `founders@calmdevlabs.com` live.
 5. **Post-deploy spot-check** — confirm the live site renders and the contact form behaves (I will verify if asked).
 
 ## Claude for Startups readiness checklist

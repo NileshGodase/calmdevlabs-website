@@ -1,9 +1,8 @@
 # Company Email Setup — Zoho Mail on calmdevlabs.com
 
-**Status (2026-10-10):** not yet provisioned. The website is configured for the
-planned address **`contact@calmdevlabs.com`** and shows a visible "company email
-being set up" notice until this is done. After provisioning, flip
-`emailProvisioned: true` in `src/config.ts`, rebuild, and redeploy.
+**Status (2026-10-11):** ✅ provisioned — `founders@calmdevlabs.com` is live (founder
+confirmed). The website treats it as the company address. The guide below is kept
+for reference (adding aliases, tightening DMARC, etc.).
 
 > Record values below are Zoho's documented defaults — confirm against Zoho's
 > current setup wizard when applying. Do not change production DNS without the
@@ -40,12 +39,12 @@ Delete any existing MX records for `calmdevlabs.com`, then add Zoho's:
   (if you already have an SPF record, merge: only one SPF record per domain).
 - **DKIM** — in Zoho Mail admin panel: generate the DKIM key for the domain, then
   add the TXT record Zoho shows (host looks like `zmail._domainkey`).
-- **DMARC** — TXT at `_dmarc`: `v=DMARC1; p=none; rua=mailto:contact@calmdevlabs.com`
+- **DMARC** — TXT at `_dmarc`: `v=DMARC1; p=none; rua=mailto:founders@calmdevlabs.com`
   (start at `p=none`, tighten later once mail flow is confirmed).
 
 ## 5. Create the mailbox
 
-In Zoho admin: add user `contact@calmdevlabs.com` (and any aliases, e.g.
+In Zoho admin: add user `founders@calmdevlabs.com` (and any aliases, e.g.
 `hello@`, `support@` → same mailbox if desired).
 
 ## 6. Test
@@ -55,9 +54,7 @@ to it. Check SPF/DKIM/DMARC pass in the received headers.
 
 ## 7. Flip the website switch
 
-1. In `src/config.ts`: set `emailProvisioned: true`.
-2. `npm run build`, commit, push — the "being set up" notice disappears and the
-   contact page treats the address as live.
+✅ Done 2026-10-11: `emailProvisioned: true` in `src/config.ts`, pushed and deployed.
 3. Update `docs/CONTENT_CHECKLIST.md` (contact email row → ✅).
 
 ## Notes

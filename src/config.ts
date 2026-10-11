@@ -7,9 +7,9 @@ export const SITE = {
   domain: 'calmdevlabs.com',
   baseUrl: 'https://calmdevlabs.com',
   tagline: 'Software built to solve real business problems.',
-  /** Planned company address. Not provisioned yet — see docs/EMAIL_SETUP_ZOHO.md. */
-  email: 'contact@calmdevlabs.com',
-  /** Flip to true once the Zoho Mail mailbox exists and is tested. */
-  emailProvisioned: false,
+  /** Company address — provisioned via Zoho Mail on 2026-10-11. */
+  email: 'founders@calmdevlabs.com',
+  /** Set false again if the mailbox is ever deprovisioned. */
+  emailProvisioned: true,
   location: 'India',
 } as const;

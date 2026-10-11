@@ -9,7 +9,7 @@ Every item the site needs, who owns it, and its status.
 | Item | Status | Notes |
 |---|---|---|
 | Production domain (exact) | ✅ | `calmdevlabs.com` (apex canonical), confirmed 2026-10-10 |
-| Contact email (verified) | ✏️ | Planned: `contact@calmdevlabs.com` via Zoho Mail — **not yet provisioned**; site shows visible "being set up" notice; setup steps in `docs/EMAIL_SETUP_ZOHO.md` |
+| Contact email (verified) | ✅ | `founders@calmdevlabs.com` — provisioned 2026-10-11 (founder confirmed); site treats it as live |
 | Company logo/wordmark | 🔧 | Custom SVG in Phase 3 |
 | Favicon | 🔧 | SVG favicon, Phase 3 |
 | Social sharing image (OG) | 🔧 | Generated, Phase 3 |
