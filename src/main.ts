@@ -155,3 +155,103 @@ if (form) {
     }
   });
 }
+
+/**
+ * AI Solutions demo: illustrative sample document Q&A.
+ * Answers come from a fixed sample dataset — no AI model is involved.
+ * The page labels this clearly; this script must never imply otherwise.
+ */
+(() => {
+  const root = document.querySelector<HTMLElement>('[data-ai-demo]');
+  if (!root) return;
+  const log = root.querySelector<HTMLElement>('[data-demo-log]');
+  const form = root.querySelector<HTMLFormElement>('[data-demo-form]');
+  const input = root.querySelector<HTMLInputElement>('[data-demo-input]');
+  if (!log || !form || !input) return;
+
+  interface SampleAnswer {
+    keywords: string[];
+    answer: string;
+  }
+  const SAMPLE_ANSWERS: SampleAnswer[] = [
+    {
+      keywords: ['return', 'refund', 'send back', 'exchange'],
+      answer:
+        'According to the sample policy: returns are accepted within 30 days of purchase with a receipt, and refunds go to the original payment method within 5 business days.',
+    },
+    {
+      keywords: ['damaged', 'broken', 'defective', 'photo'],
+      answer:
+        'According to the sample policy: damaged items are replaced free of charge — just send a photo of the damage.',
+    },
+    {
+      keywords: ['bulk', 'discount', 'wholesale', '10%'],
+      answer:
+        'According to the sample policy: bulk orders of 10 or more items get a 10% discount, applied automatically at checkout.',
+    },
+    {
+      keywords: ['hours', 'support', 'contact', 'open', 'phone', 'help'],
+      answer:
+        'According to the sample policy: support hours are Monday–Friday, 9am–6pm IST.',
+    },
+    {
+      keywords: ['receipt', 'proof of purchase'],
+      answer:
+        'According to the sample policy: a receipt is required for returns within the 30-day window.',
+    },
+  ];
+  const FALLBACK =
+    'That is not covered in the sample document above. In a production version, this is where retrieval would search your full document set — try one of the suggested questions.';
+
+  const addMessage = (text: string, kind: 'q' | 'a'): void => {
+    const empty = log.querySelector('.demo-empty');
+    if (empty) empty.remove();
+    const div = document.createElement('div');
+    div.className = `demo-msg demo-msg-${kind}`;
+    if (kind === 'a') {
+      const label = document.createElement('span');
+      label.className = 'demo-a-label';
+      label.textContent = 'Sample answer (illustrative)';
+      div.appendChild(label);
+      div.appendChild(document.createTextNode(text));
+    } else {
+      div.textContent = text;
+    }
+    log.appendChild(div);
+    log.scrollTop = log.scrollHeight;
+  };
+
+  const findAnswer = (question: string): string => {
+    const q = question.toLowerCase();
+    for (const entry of SAMPLE_ANSWERS) {
+      if (entry.keywords.some((k) => q.includes(k))) return entry.answer;
+    }
+    return FALLBACK;
+  };
+
+  const ask = (question: string): void => {
+    const trimmed = question.trim();
+    if (!trimmed) return;
+    addMessage(trimmed, 'q');
+    addMessage(findAnswer(trimmed), 'a');
+  };
+
+  const empty = document.createElement('p');
+  empty.className = 'demo-empty';
+  empty.textContent = 'Ask a question about the sample document — or tap a suggestion below.';
+  log.appendChild(empty);
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    ask(input.value);
+    input.value = '';
+    input.focus();
+  });
+
+  root.querySelectorAll<HTMLButtonElement>('[data-demo-q]').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const q = chip.getAttribute('data-demo-q');
+      if (q) ask(q);
+    });
+  });
+})();

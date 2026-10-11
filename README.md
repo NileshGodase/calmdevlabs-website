@@ -32,14 +32,14 @@ npm run build:icons
 
 ```
 src/
-  index.html, about.html, services.html, …   # pages (one real HTML file each)
+  index.html, about.html, services.html, ai-solutions.html, …   # pages (one real HTML file each)
   partials/      # header.html, footer.html, sprite.html (generated)
   styles/        # tokens.css (design system), main.css
-  main.ts        # nav toggle, form validation, mailto fallback
+  main.ts        # nav toggle, form validation, mailto fallback, AI demo widget
   config.ts      # domain, contact email, emailProvisioned flag
 public/          # CNAME, logo.png, og-image.png, robots.txt, sitemap.xml
 scripts/         # build-icons.mjs
-docs/            # implementation plan, deployment guide, content checklist, testing report
+docs/            # implementation plan, deployment guide, content checklist, testing report, AI capabilities
 ```
 
 ## Deployment
