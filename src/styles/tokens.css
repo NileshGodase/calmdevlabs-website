@@ -28,7 +28,20 @@
   --color-on-dark-faint: #7e8ba3;
   --color-line-dark: rgba(255, 255, 255, 0.12);
 
-  /* ---- Semantics ---- */
+  /* ---- Game accents ---- */
+  --color-amber: #fbbf24;    /* stars, highlights */
+  --color-coral: #fb7185;    /* playful accent, sparing */
+  --color-lime: #a3e635;     /* playful accent, sparing */
+  --color-bg: #070b14;       /* page background (dark) */
+  --color-surface: #0d1526;  /* dark card */
+  --color-surface-2: #131f38; /* raised dark card */
+  --color-line-strong: rgba(255, 255, 255, 0.16);
+
+  /* ---- Display type ---- */
+  --text-5xl: 4rem;
+  --text-6xl: 4.75rem;
+  --radius-xl: 20px;
+  --shadow-glow: 0 0 0 1px rgba(45, 212, 191, 0.25), 0 18px 48px -16px rgba(45, 212, 191, 0.35);
   --color-danger: #dc2626;
   --color-success: #0f766e;
 
